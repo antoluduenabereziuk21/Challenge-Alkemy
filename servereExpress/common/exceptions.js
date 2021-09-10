@@ -1,4 +1,4 @@
-//manejo de errores propios 
+//manejo de errores propios
 
 const exceptionType = {
     unhandledException:{
@@ -17,7 +17,7 @@ const exceptionType = {
         httpStatus: 400
     },
     invalidToken:
-    { code: 501, 
+    { code: 501,
         message: 'Invalid token'},
     paises:{
         notFound: {
@@ -26,7 +26,7 @@ const exceptionType = {
             httpStatus: 404
         },
         },
-        productos:{
+        presupuesto:{
             notFound: {
                 code: 2000,
                 message: "Producto no se encuentra",
@@ -37,7 +37,7 @@ const exceptionType = {
                 message: "faltan parametros obligatorios",
                 httpStatus: 400
             },
-            
+
             },
     // code of users 100
     users : {
