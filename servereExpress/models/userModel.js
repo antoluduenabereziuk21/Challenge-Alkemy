@@ -20,20 +20,20 @@ const  UserModel = sequelizeConnection.define(
         allowNull: false,
         fields: 'password'
       },
-    name: {
-        type: Sequelize.STRING,
-        allowNull:  false,
-        fields: 'name'
-    },
-    email: {
+      email: {
         type:Sequelize.STRING,
         allowNull: true,
         fields: 'email'
-    },
-    balance: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-    }
+      },
+      balance: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      }
+      // name: {
+      //     type: Sequelize.STRING,
+      //     allowNull:  false,
+      //     fields: 'name'
+      // },
     // last_name: {
     //     type:Sequelize.STRING,
     //     allowNull: false,
