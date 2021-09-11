@@ -25,6 +25,15 @@ const  UserModel = sequelizeConnection.define(
         allowNull:  false,
         fields: 'name'
     },
+    email: {
+        type:Sequelize.STRING,
+        allowNull: true,
+        fields: 'email'
+    },
+    balance: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+    }
     // last_name: {
     //     type:Sequelize.STRING,
     //     allowNull: false,
@@ -40,11 +49,6 @@ const  UserModel = sequelizeConnection.define(
     //     allowNull: true,
     //     fields: 'city'
     // },
-    email: {
-        type:Sequelize.STRING,
-        allowNull: true,
-        fields: 'email'
-    },
     // condition: {
     //     type:Sequelize.STRING,
     //     allowNull: false,
