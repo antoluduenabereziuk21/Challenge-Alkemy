@@ -1,9 +1,14 @@
 const userModel = require("/models/userModel");
 const error = require("/common/error");
 const exception = require("/common/exception");
+const { where } = require("sequelize/types");
 
 const getAllServices= async ({balance})=>{
-  const balanceUser = await userModel.findAll({atributes:['expenses','income']});
+  const where={}
+  if(balance){
+    where.balance = balance;
+  }
+  const balanceUser = await userModel.findAll({atributes:['expenses','income'],where:where});
   return balanceUser;
 }
 
