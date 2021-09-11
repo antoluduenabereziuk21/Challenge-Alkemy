@@ -10,11 +10,11 @@ const  UserModel = sequelizeConnection.define(
         primaryKey: true,
         autoIncrement: true,
     },
-    user_name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        fields: 'user_name'
-    },
+    // user_name: {
+    //     type: Sequelize.STRING,
+    //     allowNull: false,
+    //     fields: 'user_name'
+    // },
     password: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -25,39 +25,39 @@ const  UserModel = sequelizeConnection.define(
         allowNull:  false,
         fields: 'name'
     },
-    last_name: {
-        type:Sequelize.STRING,
-        allowNull: false,
-        fields: 'last_name'
-    },
-    country: {
-        type:Sequelize.INTEGER,
-        allowNull: true,
-        fields: 'country'
-    },
-    city: {
-        type:Sequelize.INTEGER,
-        allowNull: true,
-        fields: 'city'
-    },
+    // last_name: {
+    //     type:Sequelize.STRING,
+    //     allowNull: false,
+    //     fields: 'last_name'
+    // },
+    // country: {
+    //     type:Sequelize.INTEGER,
+    //     allowNull: true,
+    //     fields: 'country'
+    // },
+    // city: {
+    //     type:Sequelize.INTEGER,
+    //     allowNull: true,
+    //     fields: 'city'
+    // },
     email: {
         type:Sequelize.STRING,
         allowNull: true,
         fields: 'email'
     },
-    condition: {
-        type:Sequelize.STRING,
-        allowNull: false,
-        fields: 'condition'
-    },
-    createdAt: {
-        type: Sequelize.DATE,
-        field: 'created_at'
-      },
-      updatedAt: {
-        type: Sequelize.DATE,
-        field: 'updated_at'
-      }
+    // condition: {
+    //     type:Sequelize.STRING,
+    //     allowNull: false,
+    //     fields: 'condition'
+    // },
+    // createdAt: {
+    //     type: Sequelize.DATE,
+    //     field: 'created_at'
+    //   },
+    //   updatedAt: {
+    //     type: Sequelize.DATE,
+    //     field: 'updated_at'
+    //   }
 },
 {
     tableName:'users',
