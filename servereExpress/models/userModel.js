@@ -10,11 +10,11 @@ const  UserModel = sequelizeConnection.define(
         primaryKey: true,
         autoIncrement: true,
     },
-    // user_name: {
-    //     type: Sequelize.STRING,
-    //     allowNull: false,
-    //     fields: 'user_name'
-    // },
+    user_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        fields: 'user_name'
+    },
     password: {
         type: Sequelize.STRING,
         allowNull: false,
