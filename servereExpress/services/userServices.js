@@ -1,7 +1,7 @@
-const userModel = require("/models/userModel");
-const error = require("/common/error");
-const exception = require("/common/exception");
-const { where } = require("sequelize/types");
+const userModel = require("../models/userModel");
+// const error = require("/common/error");
+// const exception = require("/common/exception");
+
 
 const getAllServices= async ({balance})=>{
   const where={}

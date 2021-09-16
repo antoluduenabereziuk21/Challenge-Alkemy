@@ -10,4 +10,4 @@ app.listen(port, ()=> {
   console.log(`App listen in port :${port}`);
 })
 
-app.use("/user").require("./routes/userRoutes");
+app.use("/user",require("./routes/userRoutes"));

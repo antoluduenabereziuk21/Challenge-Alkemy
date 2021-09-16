@@ -8,5 +8,5 @@ router.get("/",(req, res,)=> {
 });
 
 module.exports = router;
-const {exceptionType} = require("./exceptions");
+
 

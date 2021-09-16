@@ -1,6 +1,6 @@
-const userService = require('/services/userServices');
-const exceptions = require('/common/exceptions');
-const error= require('/common/error');
+const userService = require('../services/userServices');
+const exceptions = require('../common/exceptions');
+const error= require('../common/error');
 
 const getAll = async (req,res) => {
   const query = req.query;
