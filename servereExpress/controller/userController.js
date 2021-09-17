@@ -2,15 +2,15 @@ const userServices = require('../services/userServices');
 const exceptions = require('../common/exceptions');
 const error= require('../common/error');
 
-// const getAll = async (req,res) => {
-//   const query = req.query;
-//   console.log("get all controller -query"+ JSON.stringify(query));
-//   // if (!req.query){
-//   //   throw new error.AppError (exceptions.exceptionsType.prosupuesto.notFound,"se require id");
-//   // }
-//   const usario = await userServices.getAllServices();
-//   res.status(200).json(usario);
-// }
+const getAll = async (req,res) => {
+  // const query = req.query;
+  // console.log("get all controller -query"+ JSON.stringify(query));
+  // if (!req.query){
+  //   throw new error.AppError (exceptions.exceptionsType.prosupuesto.notFound,"se require id");
+  // }
+  const usario = await userServices.getAllServices();
+  res.status(200).json(usario);
+}
 
 const getById = async (req,res)=>{
   const params = req.params
@@ -21,7 +21,7 @@ const getById = async (req,res)=>{
   res.status(200).json(usuarios)
 }
 module.exports ={
-  // getAll,
+  getAll,
   getById,
 };
 /*

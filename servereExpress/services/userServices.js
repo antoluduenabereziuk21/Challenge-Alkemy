@@ -3,14 +3,14 @@ const error = require("../common/error");
 const exceptions = require("../common/exceptions");
 
 
-// const getAllServices = async()=>{
-//   // const where={}
-//   // if(user_name){
-//   //   where.user_name= user_name;
-//   // }
-//   const users = await userModel.findAll({atributes:['user_name']});
-//   return users;
-// }
+const getAllServices = async()=>{
+  // const where={}
+  // if(user_name){
+  //   where.user_name= user_name;
+  // }
+  const users = await userModel.findAll({atributes:['user_name']});
+  return users;
+}
 
 const getById = async (id) =>{
   console.log("getById -id: " + id);
@@ -25,5 +25,5 @@ const getById = async (id) =>{
 
 module.exports = {
   getById,
-  // getAllServices
+  getAllServices
 }

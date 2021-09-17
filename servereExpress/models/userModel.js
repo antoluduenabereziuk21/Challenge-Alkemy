@@ -25,11 +25,11 @@ const  UserModel = sequelizeConnection.define(
         allowNull: true,
         fields: 'email'
       },
-      created_at:{
+      createdAt:{
         type:Sequelize.DATE,
         fields: 'createdAt'
       },
-      updated_at:{
+      updatedAt:{
         type:Sequelize.DATE,
         fields: 'updatedAt'
       }
