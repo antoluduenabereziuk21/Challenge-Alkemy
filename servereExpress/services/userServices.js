@@ -1,15 +1,29 @@
 const userModel = require("../models/userModel");
-// const error = require("/common/error");
-// const exception = require("/common/exception");
+const error = require("../common/error");
+const exceptions = require("../common/exceptions");
 
 
-const getAllServices= async ({balance})=>{
-  const where={}
-  if(balance){
-    where.balance = balance;
+// const getAllServices = async()=>{
+//   // const where={}
+//   // if(user_name){
+//   //   where.user_name= user_name;
+//   // }
+//   const users = await userModel.findAll({atributes:['user_name']});
+//   return users;
+// }
+
+const getById = async (id) =>{
+  console.log("getById -id: " + id);
+  const usuario = await userModel.findByPk(id);
+  if(!usuario){
+      throw new error.AppError(exceptions.exceptionType.productos.notFound)
   }
-  const balanceUser = await userModel.findAll({atributes:['expenses','income'],where:where});
-  return balanceUser;
+
+  console.log("user return :" + usuario)
+  return usuario;
 }
 
-module.export={getAllServices};
+module.exports = {
+  getById,
+  // getAllServices
+}

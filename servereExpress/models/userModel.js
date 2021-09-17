@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const {sequelizeConnection} = require('../config/server/sequelizeConfig')
 
 const  UserModel = sequelizeConnection.define(
-    'User',
+    'Users',
 {
     id_user:{
         type: Sequelize.INTEGER,
@@ -24,6 +24,14 @@ const  UserModel = sequelizeConnection.define(
         type:Sequelize.STRING,
         allowNull: true,
         fields: 'email'
+      },
+      createdAt:{
+        type:Sequelize.DATE,
+        field: 'created_at'
+      },
+      updateAt:{
+        type:Sequelize.DATE,
+        field: 'updated_at'
       }
 },
 {
