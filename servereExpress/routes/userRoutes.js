@@ -10,6 +10,10 @@ router.get("/",(req, res,)=> {
   routeController.handleRequest(req, res,userController.getAll);
 });
 
+router.post('/',(req,res)=>{
+  routeController.handelRequest(req,res,userController.create)
+})
+
 module.exports = router;
 
 
