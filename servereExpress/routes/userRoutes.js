@@ -11,7 +11,7 @@ router.get("/",(req, res,)=> {
 });
 
 router.post('/',(req,res)=>{
-  routeController.handelRequest(req,res,userController.create)
+  routeController.handleRequest(req,res,userController.create)
 })
 
 module.exports = router;

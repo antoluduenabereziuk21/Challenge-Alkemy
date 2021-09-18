@@ -26,6 +26,14 @@ const  BalanceModel = sequelizeConnection.define(
         model: 'user',
         key: 'id_user'
       }
+    },
+    createdAt:{
+      type:Sequelize.DATE,
+      fields: 'createdAt'
+    },
+    updatedAt:{
+      type:Sequelize.DATE,
+      fields: 'updatedAt'
     }
 },
 {

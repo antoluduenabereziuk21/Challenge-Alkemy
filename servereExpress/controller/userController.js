@@ -20,9 +20,18 @@ const getById = async (req,res)=>{
   const usuarios = await userServices.getById(id)
   res.status(200).json(usuarios)
 }
+
+const create = async (req, res) => {
+  const data = req.body
+  console.log("llega en el body "+JSON.stringify(data.user_name));
+  const userId = await userServices.create(data);
+  res.status(201).json({userId})
+}
+
 module.exports ={
   getAll,
   getById,
+  create
 };
 /*
 db id_user, user, username, password,

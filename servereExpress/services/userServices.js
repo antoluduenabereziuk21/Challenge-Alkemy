@@ -23,7 +23,20 @@ const getById = async (id) =>{
   return usuario;
 }
 
+const create = async ({user_name,password,email})=>{
+  console.log("user crete :"+JSON.stringify({user_name,password,email}));
+ const data = {
+  user_name,
+  password,
+  email
+ }
+
+  const usuario = await userModel.create(data)
+  return usuario;
+}
+
 module.exports = {
   getById,
-  getAllServices
+  getAllServices,
+  create,
 }
