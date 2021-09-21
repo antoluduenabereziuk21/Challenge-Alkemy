@@ -1,6 +1,7 @@
 require ('dotenv').config();
 
 module.exports ={
+  apiPrefix:'/api/v1',
   mysql:{
     host: 'localhost',
     port: 3306,
