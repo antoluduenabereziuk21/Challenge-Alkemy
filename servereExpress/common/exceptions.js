@@ -16,29 +16,31 @@ const exceptionType = {
         message: "Bad Request",
         httpStatus: 400
     },
-    invalidToken:
-    { code: 501,
-        message: 'Invalid token'},
+    invalidToken:{
+        code: 501,
+        message: 'Invalid token'
+    },
     paises:{
         notFound: {
-            code: 1000,
-            message: "Pais no se encuentra",
-            httpStatus: 404
+          code: 1000,
+          message: "Pais no se encuentra",
+          httpStatus: 404
         },
-        },
-        presupuesto:{
-            notFound: {
-                code: 2000,
-                message: "Producto no se encuentra",
-                httpStatus: 404
-            },
-            badRequest: {
-                code: 2001,
-                message: "faltan parametros obligatorios",
-                httpStatus: 400
-            },
+    },
+    budget:{
 
-            },
+      notFound: {
+        code: 2000,
+        message: "Producto no se encuentra",
+        httpStatus: 404
+      },
+
+      badRequest: {
+        code: 2001,
+        message: "faltan parametros obligatorios",
+        httpStatus: 400
+      },
+    },
     // code of users 100
     users : {
         invalidPassword: {

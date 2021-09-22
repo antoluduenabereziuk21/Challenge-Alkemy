@@ -45,3 +45,16 @@ const  BudgetModel = sequelizeConnection.define(
 )
 
 module.exports = BudgetModel
+<<<<<<< HEAD
+=======
+
+module.exports = Customers;
+
+BudgetModel.belongsTo(UserModel, {
+  foreignKey: 'user_budget', targetKey: 'id_user'
+});
+
+UserModel.hasMany(BudgetModel,{
+  as: 'bugdet'
+})
+>>>>>>> sequelize
