@@ -28,10 +28,19 @@ const create = async (req, res) => {
   res.status(201).json({userId})
 }
 
+const login = async (req, res) => {
+  const data = req.body
+  const userInfo = await userServices.login(data);
+  res.json({userInfo})
+}
+
+const login = async
+
 module.exports ={
   getAll,
   getById,
-  create
+  create,
+  login
 };
 /*
 db id_user, user, username, password,
