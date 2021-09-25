@@ -45,7 +45,7 @@ const exceptionType = {
     users : {
         invalidPassword: {
             code: 100,
-            message: "Credenciales incorrectas",
+            message: "Incorrectly Crediantials",
             httpStatus: 401
         },
         cannotCreateUser: {
@@ -60,7 +60,12 @@ const exceptionType = {
         },
         userExists: {
             code: 103,
-            message: "El usuario ya se encuentra registrado",
+            message: "the user is already register",
+            httpStatus: 400
+        },
+        emailExists: {
+            code: 104,
+            message: "the email is already register",
             httpStatus: 400
         },
     },

@@ -11,6 +11,6 @@ module.exports ={
   },
   auth:{
     secret:process.env.SECRET_KEY,
-    tokenExpire: '24Hour'
+    tokenExpire: '24h'
   }
 }

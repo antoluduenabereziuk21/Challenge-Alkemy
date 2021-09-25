@@ -8,7 +8,7 @@ const apiPrefix= config.get('apiPrefix');
 const passport = require('passport');
 const passportConfig = require('./config/server/passportConfig');
 
-passport.use(passportConfig.CreateStrategy());
+passport.use(passportConfig.createStrategy());
 app.use(passport.initialize());
 
 app.use(bodyParser.json());

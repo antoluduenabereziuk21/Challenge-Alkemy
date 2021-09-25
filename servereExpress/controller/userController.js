@@ -34,7 +34,7 @@ const login = async (req, res) => {
   res.json({userInfo})
 }
 
-const login = async
+
 
 module.exports ={
   getAll,
