@@ -11,6 +11,7 @@ const passportConfig = require('./config/server/passportConfig');
 passport.use(passportConfig.createStrategy());
 app.use(passport.initialize());
 
+app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 app.use("/",router);
 
