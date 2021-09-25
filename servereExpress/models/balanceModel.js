@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
 const {sequelizeConnection} = require('../config/server/sequelizeConfig')
-const user_budget = require ('./userModel');
 
 const  BudgetModel = sequelizeConnection.define(
     'budget',
@@ -11,7 +10,7 @@ const  BudgetModel = sequelizeConnection.define(
         primaryKey: true,
         autoIncrement: true,
     },
-    budget_tipe:{
+    budget_type:{
       type: Sequelize.INTEGER,
       allowNull: false,
       fields:'budget_tipe',
@@ -24,10 +23,8 @@ const  BudgetModel = sequelizeConnection.define(
     },
     user_budget:{
       type: Sequelize.INTEGER,
-      reference: {
-        model: user_budget,
-        key: 'id_user'
-      }
+      allowNull: false,
+      fields:'user_budget'
     },
     createdAt:{
       type:Sequelize.DATE,
@@ -44,12 +41,5 @@ const  BudgetModel = sequelizeConnection.define(
 }
 )
 
+
 module.exports = BudgetModel
-
-BudgetModel.belongsTo(UserModel, {
-  foreignKey: 'user_budget', targetKey: 'id_user'
-});
-
-UserModel.hasMany(BudgetModel,{
-  as: 'bugdet'
-})
